@@ -1,19 +1,19 @@
 
+
 var socket = io.connect('http://localhost:8000');
-var message = document.getElementsById('message');
-var username = document.getElementsById('username');
-var btn = document.getElementsById('send');
-var output = document.getElementsById('output');
+var output = document.getElementById('output');
+var btn = document.getElementById('send');
+var un = document.getElementById('username');
+var msg = document.getElementById('message');
 
 
 function clicked() {
-  console.log('clicked');
-  socket.emit('feedback', {
-    message: message.value,
-    username: username.value
+  socket.emit('feedback',{
+    message: msg.value,
+    username: un.value
   });
+}
 
-
-socket.on('chat',function(data) {
-  output.innerHTML += '<p><strong>' + data.username+':</strong>' + data.feedback+'</p>';
+socket.on('feedback', function(data) {
+  output.innerHTML += '<p><strong>'+data.username+': </strong>' + data.message + '.</p>';
 });

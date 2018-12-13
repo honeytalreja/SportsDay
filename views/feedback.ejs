@@ -4,24 +4,20 @@
   <head>
     <meta charset="utf-8">
     <title> Feedback </title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"> </script>
-    <script type="text/javascript" src="./chat.js"></script>
-    <link href="/css/user.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <link href="/css/feedback.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="heading">
       <h1>Welcome to Oeia Sports Day</h1>
     </div>
 
-    <div id="feedbacks">
-      <div id="window">
-        <div id="output"></div>
-      </div>
-      <input type="text" id="username" placeholder="UserName" />
-      <input type="text" id="message" placeholder="Message" />
-      <button id="send" onclick="clicked()">Send</button>
+    <div class="feedbacks">
+      <input type="text" id="username" placeholder="Username" />
+      <input type="text" id="message" placeholder="Your Reviews" />
+      <button id="send" onclick="clicked();">send</button>
     </div>
-
-
+    <div id="output"><h1>Live Feedback Session</h1> </div>
+    <script src="/chat.js"> </script>
   </body>
 </html>

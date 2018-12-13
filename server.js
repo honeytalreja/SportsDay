@@ -2,9 +2,9 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-var socket = require('socket.io');
 const index = require('./routes/index');
 const feedback = require('./routes/feedback');
+var socket = require('socket.io');
 const user = require('./routes/user');
 const app = express();
 
@@ -27,11 +27,9 @@ var server = app.listen(8000,()=> {
   console.log('server started on 8000 ..');
 });
 
-
 var io = socket(server);
-
 io.on('connection', function(socket) {
-  console.log('made connection');
+  console.log('made connection',socket.id);
   socket.on('feedback',function(data) {
     io.sockets.emit('feedback',data);
   });

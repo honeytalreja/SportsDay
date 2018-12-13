@@ -8,6 +8,9 @@
   padding: 10px;
 }
 
-.window {
-  height: 500px;
+.feedbacks {
+  margin-top: 20px;
+  padding: 5%;
+  width: auto;
+  height: auto;
 }
