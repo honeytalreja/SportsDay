@@ -34,3 +34,49 @@ io.on('connection', function(socket) {
     io.sockets.emit('feedback',data);
   });
 });
+
+// Asynchronus Callbacks
+function one(callback) {
+  setTimeout(() => {
+    console.log('one finished now');
+    callback();
+  },2000);
+}
+
+function two() {
+    setTimeout(()=>{
+      console.log('two finished now');
+    },1000);
+}
+
+one(two);
+
+
+// Promises
+function three() {
+  return new Promise((resolve,reject)=> {
+    setTimeout(() => {
+      console.log('three finished now');
+      resolve();
+    },2000);
+  });
+}
+
+function four() {
+  setTimeout(()=> {
+    console.log('Four finished now');
+  },1000);
+}
+
+three()
+  .then(four);
+
+
+// async await
+
+async function init() {
+  await three();
+  four();
+}
+
+init();
