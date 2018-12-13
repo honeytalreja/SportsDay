@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> <%= title %> </title>
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="heading">
+      <h1><%= Heading %></h1>
+    </div>
+
+    <div class="details">
+      <form method="POST" action="./user">
+        <div>Name : </div>
+        <input type="text" name="name"/>
+        <div>City : </div>
+        <input type="text" name="city"></input>
+        <br/>
+        <button type="submit"> Register </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Users </title>
+    <link href="/css/user.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Welcome to Oeia Sports Day</h1>
+    </div>
+    <div class="welcomeMessage">
+      <h1> <%= Greeting%> !!</h1>
+      <h2>Glad you Registered <%= Name %>.</h2>
+      <h2>We hope you take back good memories to <%= City %>.</h2>
+    </div>
+    <div class="feedback">
+      <h2>Please make sure you give us Feedback.</h2>
+      <form method="POST" action="./feedback">
+        <input type="hidden" name="name" value= <%= Name %> />
+        <input type="hidden" name="city" value= <%=City%> />
+        <br/>
+        <button type="submit"> Feedback </button>
+      </form>
+    </div>
+
+  </body>
+</html>

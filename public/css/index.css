@@ -1,0 +1,26 @@
+
+.heading {
+  color: white;
+  height: 80px;
+  width: auto;
+  text-align: center;
+  background-color: black;
+  padding: 10px;
+}
+
+.details {
+  margin-top: 20px;
+  padding-left: 50%;
+  padding-top: 15%;
+}
+
+.details > form > input {
+  margin: 10px 0;
+}
+
+.details > form > button {
+  font-size: 16px;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+}

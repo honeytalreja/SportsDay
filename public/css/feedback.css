@@ -1,0 +1,13 @@
+
+.heading {
+  color: white;
+  height: 80px;
+  width: auto;
+  text-align: center;
+  background-color: black;
+  padding: 10px;
+}
+
+.window {
+  height: 500px;
+}
