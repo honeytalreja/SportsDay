@@ -8,6 +8,8 @@ var socket = require('socket.io');
 const user = require('./routes/user');
 const app = express();
 
+
+// this is just for fun
 //View Engine
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');

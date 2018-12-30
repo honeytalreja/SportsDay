@@ -8,7 +8,8 @@ const mongojs = require('mongojs');
 const db = mongojs('mongodb://localhost/application');
 
 router.post('/',(req,res) => {
-  res.render('feedback');
+  console.log('feedback');
+  res.sendFile(__dirname+'../views/somefile.pdf');
 });
 
 module.exports = router;
