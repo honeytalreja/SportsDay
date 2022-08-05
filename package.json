@@ -13,7 +13,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongojs": "^2.6.0",
-    "mongoose": "^5.3.16",
+    "mongoose": "^5.7.5",
     "nodemon": "^1.18.8",
     "socket.io": "^2.2.0"
   }
